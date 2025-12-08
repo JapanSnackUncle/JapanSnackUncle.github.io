@@ -95,7 +95,6 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* gap: 6px; */
     width: 150px;
     height: 120px;
 }
@@ -156,21 +155,49 @@ h1 {
     padding: 40px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .tier-label {
-        width: 32px;
-        font-size: 1.2em;
+        width: 25px;
+        font-size: 1.0em;
+    }
+
+    body {
+      padding: 3px;
+    }
+
+    .container {
+      gap: 3px;
+    }
+
+    .tier-list {
+      padding: 3px;
+      gap: 3px;
+    }
+
+    .tier-section {
+      gap: 3px;
     }
 
     .item {
-        font-size: 0.9em;
+      width: 120px;
+      height: 100px;
+      font-size: 0.8em;
     }
 
+   .item-image {
+      width: 110px;
+      min-height: 30px;
+   }
+
     h1 {
-        font-size: 1.5em;
+        font-size: 1.2em;
     }
+
+   .description-panel {
+      padding: 5px;
+   }
     .description-panel h2 {
-        font-size: 1.0em;
+        font-size: .8em;
     }
 
    .description-panel p {
