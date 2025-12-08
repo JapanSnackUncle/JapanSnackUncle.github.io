@@ -155,7 +155,7 @@ h1 {
     padding: 40px;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 768px) {
     .tier-label {
         width: 25px;
         font-size: 1.0em;
