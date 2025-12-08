@@ -1,8 +1,18 @@
 let tierData = [];
 let selectedItem = null;
 
+// Get CSV filename from query parameter or data attribute
+function getCSVFile() {
+   const script = document.currentScript;
+   if (script && script.dataset.csv) {
+      return script.dataset.csv;
+   }
+   return 'tierDataSalty.csv';
+}
+
 function loadCSV() {
-   fetch('tierDataSweet.csv')
+   const csvFile = getCSVFile();
+   fetch(csvFile)
       .then(response => response.text())
       .then(csvText => {
          Papa.parse(csvText, {
@@ -54,14 +64,32 @@ function selectItem(element, itemData, tier) {
    const descPanel = document.getElementById(descPanelId);
    if (descPanel) {
       descPanel.style.display = 'flex';
+      
+      let socialLinks = '';
+      if (itemData.youtube || itemData.instagram || itemData.tiktok) {
+         socialLinks = '<div class="social-links">';
+         if (itemData.youtube) {
+            socialLinks += `<a href="${itemData.youtube}" target="_blank" rel="noopener noreferrer" class="social-icon">▶️</a>`;
+         }
+         if (itemData.instagram) {
+            socialLinks += `<a href="${itemData.instagram}" target="_blank" rel="noopener noreferrer" class="social-icon">📷</a>`;
+         }
+         if (itemData.tiktok) {
+            socialLinks += `<a href="${itemData.tiktok}" target="_blank" rel="noopener noreferrer" class="social-icon">🎶</a>`;
+         }
+         socialLinks += '</div>';
+      }
+      
       descPanel.innerHTML = `
          <h2>${itemData.name}</h2>
          <p>${itemData.description}</p>
+         ${socialLinks}
       `;
    } else {
       console.error(`Description panel not found: ${descPanelId}`);
    }
 }
+
 
 function initializeTierList() {
    for (const item of tierData) {
