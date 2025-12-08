@@ -148,19 +148,18 @@ function selectItem(element, itemData, tier) {
    element.classList.add('selected');
    selectedItem = element;
 
-   // // Show description in the correct tier panel
-   // const descPanelId = `description-${tier}`;
-   // const descPanel = document.getElementById(descPanelId);
-   
-   // if (descPanel) {
-   //       descPanel.style.display = 'flex';
-   //       descPanel.innerHTML = `
-   //          <h2>${itemData.name}</h2>
-   //          <p>${itemData.description}</p>
-   //       `;
-   // } else {
-   //       console.error(`Description panel not found: ${descPanelId}`);
-   // }
+   // Show description in the correct tier panel
+   const descPanelId = `description-${tier}`;
+   const descPanel = document.getElementById(descPanelId);
+   if (descPanel) {
+         descPanel.style.display = 'flex';
+         descPanel.innerHTML = `
+            <h2>${itemData.name}</h2>
+            <p>${itemData.description}</p>
+         `;
+   } else {
+         console.error(`Description panel not found: ${descPanelId}`);
+   }
 }
 
 // Initialize the tier list
