@@ -174,12 +174,7 @@ h1 {
    justify-content: center;
 }
 
-h2 {
-   text-align: center;
-   color: white;
-   font-size: 3em;
-   text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-}
+
 
 .nav-button {
    padding: 15px 40px;
@@ -247,9 +242,6 @@ h2 {
       min-height: 30px;
    }
 
-   h2 {
-        font-size: 1.8em;
-    }
 
     h1 {
         font-size: 1.2em;
