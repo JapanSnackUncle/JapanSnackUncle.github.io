@@ -1,5 +1,9 @@
 tier,name,image,description
-B,Kaki no Tane \n(Original),kakinotane.png,Savory, slightly spicy crescent-shaped rice crackers and peanuts. A Japanese snack classic.
-A,Jagarico \n (Salad),jagaricoSalad.jpg,Crunchy potato stick coated with carrot and parsley flakes. It's a salad!
-A,Jagarico \n (Cheese),jagaricoCheese,Crunchy potato stick coated with cheesy clusters.
-C,Jagarico \n (Butter Potato),jagaricoButter,Crunchy potato stick with a buttery flavor.
+B,"Kaki no Tane
+(Original)",kakinotane.png,"Savory, slightly spicy crescent-shaped rice crackers and peanuts. A Japanese snack classic."
+A,"Jagarico
+(Salad)",jagaricoSalad.jpg,Crunchy potato stick coated with carrot and parsley flakes. It's a salad! Developed to conquer the teenage girl market.
+A,"Jagarico
+(Cheese)",jagaricoCheese.jpg,Crunchy potato stick coated with cheesy clusters. Developed to conquer the teenage girl market.
+C,"Jagarico
+(Butter Potato)",jagaricoButter.jpg,Crunchy potato stick with a buttery flavor. Developed to conquer the teenage girl market.
